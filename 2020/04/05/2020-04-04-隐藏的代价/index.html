@@ -14,7 +14,7 @@
 
 
 
-<title>20200313-04-100DaysOfCode-I can&#39;t beleive that I create a Heart Shape by code! | Alexander&#39;s Teaching Career</title>
+<title>2020-04-04-隐藏的代价 | Alexander&#39;s Teaching Career</title>
 
 
 
@@ -109,11 +109,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">20200313-04-100DaysOfCode-I can&#39;t beleive that I create a Heart Shape by code!</h1>
+            <h1 class="post-title">2020-04-04-隐藏的代价</h1>
             
                 <div class="post-meta">
                     
@@ -122,29 +184,21 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">March 13, 2020&nbsp;&nbsp;16:29:52</a>
+                        Date: <a href="#">April 5, 2020&nbsp;&nbsp;15:09:10</a>
                         </span>
                     
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/code/">code</a>
-                            
-                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcse07s93jj31j90u07aw.jpg" alt=""></p>
-<p>Wow, I can’t believe that one day I can create a heart shape only by a few lines of code, that’s a fantasty experience! </p>
-<p>That’s encourge me to keep on programming journey everyday, I love it!</p>
-<p>However, this task in FCC bother me a few time to solve it. Because I don’t know what does it mean <strong>“set its content property to an empty string”</strong></p>
-<p>But I got detailed explanation in FCC forum, it definitely helps me a lot. Here is the answer:</p>
-<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcse12e75bj31iw0u0aeh.jpg" alt=""></p>
-<p><a href="https://www.freecodecamp.org/forum/t/empty-string-in-content/277528" target="_blank" rel="noopener">comes from</a></p>
+            <h1 id="隐藏的代价"><a href="#隐藏的代价" class="headerlink" title="隐藏的代价"></a>隐藏的代价</h1><p>![image-20200405150905839](/Users/alexander/Library/Application Support/typora-user-images/image-20200405150905839.png)</p>
+<p>生活中的每一个抉择，都有隐藏在它背后的代价。所谓的工作和生活，均衡发展，是很难存在的。因为人心思变，人往高处走，高了想更高。</p>
+<p>长期陪读，你可能埋下了家庭分裂的种子；出国深造，你可能错过了一段美好的爱情；外出打工，你可能缺席了孩子身心发展的关键期……</p>
+<p>每个人都希望成就幸福美满的人生，但你的抉择，就像推到了多米诺骨牌，不到最后，你都不知道最终结果。而发生的一切，都无法重来。</p>
+<p>要是我们从一开始，就知道那个抉择对我们最有利呢？即便上天对你指出最幸福的路径，多数人也不会相信，更不会甘心。而生活也注定了，什么都无法舍弃的人，什么都无法改变。</p>
+<p>参考电影《蝴蝶效应Butterfly Effect》</p>
 
         </div>
 
@@ -159,7 +213,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://alexanderouyang.github.io/2020/03/13/20200313-04-100DaysOfCode-HeartShape/">https://alexanderouyang.github.io/2020/03/13/20200313-04-100DaysOfCode-HeartShape/</a></span>
+                        <span><a href="https://alexanderouyang.github.io/2020/04/05/2020-04-04-%E9%9A%90%E8%97%8F%E7%9A%84%E4%BB%A3%E4%BB%B7/">https://alexanderouyang.github.io/2020/04/05/2020-04-04-%E9%9A%90%E8%97%8F%E7%9A%84%E4%BB%A3%E4%BB%B7/</a></span>
                     </p>
                 
                 
@@ -182,10 +236,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/code/"># code</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -196,10 +246,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/04/05/20200402-I%20finished%20the%2007-100DaysOfCode%20Challenge/">20200402-I finished the 07-100DaysOfCode Challenge</a>
+                <a class="prev" rel="prev" href="/2020/04/05/2020-04-03-%E9%9F%B3%E4%B9%90MV%E5%88%86%E4%BA%AB%EF%BC%9A%E6%9E%97%E4%BF%8A%E5%82%91%20JJ%20Lin%20-%20%E5%8F%AF%E6%83%9C%E6%B2%92%E5%A6%82%E6%9E%9C%20If%20Only/">2020-04-03-音乐MV分享：林俊傑 JJ Lin - 可惜沒如果 If Only</a>
             
             
-            <a class="next" rel="next" href="/2020/02/17/20200217-03/100DaysOfCode%20Challenge/">20200217-03/100DaysOfCode Challenge</a>
+            <a class="next" rel="next" href="/2020/04/05/20200402-I%20finished%20the%2007-100DaysOfCode%20Challenge/">20200402-I finished the 07-100DaysOfCode Challenge</a>
             
         </section>
 
