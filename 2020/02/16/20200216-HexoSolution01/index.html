@@ -14,7 +14,7 @@
 
 
 
-<title>Hello World | Alexander&#39;s Teaching Career</title>
+<title>20200216-HexoSolution01-Please make sure you have the correct access rights and the repository exists | Alexander&#39;s Teaching Career</title>
 
 
 
@@ -109,73 +109,11 @@
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">20200216-HexoSolution01-Please make sure you have the correct access rights and the repository exists</h1>
             
                 <div class="post-meta">
                     
@@ -184,28 +122,57 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">April 5, 2020&nbsp;&nbsp;11:54:14</a>
+                        Date: <a href="#">February 16, 2020&nbsp;&nbsp;11:30:05</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Hexo/">Hexo</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>If you encounter this warning “Please make sure you have the correct access rights and the repository exists” in updating post to your Hexo blog , please follow these steps to solve the problem.</p>
+<p>我昨晚遇到了这个问题，在更新文章到Hexo blog时，出现这个警告提示（翻查了Stack Overflow，Google，Github等平台后，终于找到比较合适的解决办法）</p>
+<pre><code>&quot;Please make sure you have the correct access rights and the repository exists&quot;</code></pre><p>请按照下列步骤处理。</p>
+<ol>
+<li><p>删除.ssh 下面的known_hosts 文件</p>
+</li>
+<li><p>删除github上的密钥，并重新生成和添加密钥</p>
+</li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gby3hfkbllj31l10u0gqb.jpg" alt=""></p>
+<ol start="3">
+<li>设置.ssh</li>
+</ol>
+<p>创建 SSH 密匙，输入命令行</p>
+<pre><code>ssh-keygen -t rsa -C &quot;GitHub 邮箱&quot;，</code></pre><p>然后一路回车。</p>
+<p>添加密匙：</p>
+<p>先找到 id_rsa.pub 密钥文件</p>
+<p>方法一：<br>打开终端输入</p>
+<pre><code>cat ~/.ssh/id_rsa.pub</code></pre><p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbxyeet864j30vg0k6dig.jpg" alt=""></p>
+<p>就会显示出来，然后复制</p>
+<p>方法二：<br>打开终端输入</p>
+<pre><code>open ~/.ssh  </code></pre><p>即可，打开文件夹，就可以找到id_rsa.pub文件了。</p>
+<p>方法三：<br>在finder里按下cmd+shift+G，然后输入~/.ssh，确定，你就能看到你的文件了</p>
+<p>用Xcode软件打开，并全文复制里面的内容。</p>
+<p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。</p>
+<p><strong>（遗憾的是，我按上面步骤重新生成和添加密钥2次，仍是提示相同错误）</strong></p>
+<p><strong>4. 还是不成功，就是你家的网络问题。 建议换一个网络。 并且github是不需要翻墙的。</strong></p>
+<p><strong>最后我是用第四步解决的，切换回国内的网络，在命令框中再提交部署博客文章</strong></p>
+<pre><code>hexo g -d</code></pre><p><em>来源参考：</em></p>
+<ol>
+<li><p><a href="https://github.com/jakubroztocil/cloudtunes/issues/23" target="_blank" rel="noopener">github讨论贴</a><br><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gby3dophrtj316o0qcmyu.jpg" alt=""></p>
+</li>
+<li><p><a href="https://stackoverflow.com/questions/25927914/git-error-please-make-sure-you-have-the-correct-access-rights-and-the-reposito/31706614" target="_blank" rel="noopener">Stack Overflow讨论贴</a></p>
+</li>
+</ol>
 
         </div>
 
@@ -220,7 +187,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://alexanderouyang.github.io/2020/04/05/hello-world/">https://alexanderouyang.github.io/2020/04/05/hello-world/</a></span>
+                        <span><a href="https://alexanderouyang.github.io/2020/02/16/20200216-HexoSolution01/">https://alexanderouyang.github.io/2020/02/16/20200216-HexoSolution01/</a></span>
                     </p>
                 
                 
@@ -243,6 +210,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/Hexo/"># Hexo</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -253,6 +224,10 @@
         </section>
         <section class="post-nav">
             
+                <a class="prev" rel="prev" href="/2020/02/16/20200216-02/100DaysOfCode%20Challenge/">20200216-02/100DaysOfCode Challenge</a>
+            
+            
+            <a class="next" rel="next" href="/2020/02/15/20200215-Start%20My%20100DaysOfCode%20Challenge/">20200215-Start My 100DaysOfCode Challenge</a>
             
         </section>
 
